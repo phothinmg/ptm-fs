@@ -1,8 +1,10 @@
 {
   "name": "ptm-fs",
   "version": "1.0.0",
-  "description": "Custom function of Node fs-module",
-  "main": "mkdtemp.js",
+  "description": "Custom usage for Node fs-module",
+  "main": "src/index.js",
+  "types": "./src/index.d.ts",
+  "type": "module",
   "scripts": {
     "build": "rollup -c"
   },
@@ -15,5 +17,9 @@
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
     "rollup": "^4.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phothinmg/ptm-fs.git"
   }
 }
