@@ -1,0 +1,19 @@
+{
+  "name": "ptm-fs",
+  "version": "1.0.0",
+  "description": "Custom function of Node fs-module",
+  "main": "mkdtemp.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "node",
+    "fs"
+  ],
+  "author": "PTM",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "rollup": "^4.5.0"
+  }
+}
