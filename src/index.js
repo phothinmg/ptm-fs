@@ -331,5 +331,7 @@ class NodeFs{
     }
 }
 
-export { NodeFs as default };
+const fs = NodeFs;
+
+export { fs as default };
 //# sourceMappingURL=index.js.map

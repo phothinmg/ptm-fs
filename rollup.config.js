@@ -1,6 +1,6 @@
 import resolve from '@rollup/plugin-node-resolve';
 export default{
-    input: 'index.js',
+    input: 'opt/index.js',
     output: {
 		format: 'es',
 		dir: 'src',

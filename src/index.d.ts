@@ -1,4 +1,5 @@
-export { NodeFs as default };
+export { fs as default };
+declare const fs: typeof NodeFs;
 declare class NodeFs {
     /**
      * Retrieves a list of file paths that match the specified options.
