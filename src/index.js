@@ -1,5 +1,6 @@
 import { mkdir, readFile, writeFile, cp, rm, unlink } from 'node:fs/promises';
 import { readdirSync, lstatSync, mkdirSync, readFileSync, writeFileSync, existsSync, unlinkSync, rmdirSync, cpSync, rmSync, statSync, watch } from 'node:fs';
+import { join } from 'node:path';
 
 class nodefs{
    
@@ -51,7 +52,7 @@ class nodefs{
      * @return {Promise<void>} A Promise that resolves when the directory is successfully created.
      */
     static async mkdir(path) {
-        const projectFolder = new URL(path, import.meta.url);
+        const projectFolder = join(process.cwd(), path) ;
         
         try {
             await mkdir(projectFolder, { recursive: true });
@@ -68,7 +69,7 @@ class nodefs{
      */
     static mkdirSync(path){
         try {
-            const projectFolder = new URL(path, import.meta.url);
+            const projectFolder = join(process.cwd(), path) ;
             mkdirSync(projectFolder, { recursive: true });
             console.log(`created ${projectFolder}`);
         } catch (err) {
@@ -83,7 +84,7 @@ class nodefs{
      */
     static async readFile(path) {
         try {
-            const filePath = new URL(path, import.meta.url);
+            const filePath = join(process.cwd(), path) ;
             const contents = await readFile(filePath, { encoding: 'utf8' });
             return contents;
         } catch (err) {
@@ -98,7 +99,7 @@ class nodefs{
      * @return {string} The contents of the file.
      */
     static readFileSync(path) {
-    const filePath = new URL(path, import.meta.url);
+    const filePath = join(process.cwd(), path) ;
     const contents = readFileSync(filePath, { encoding: 'utf8' });
     
     return contents;
